@@ -45,7 +45,7 @@ const register = async (req, res) => {
 
   ///////////////////////////////////////////////////////////////////
   
-sendEmail(email, verificationToken);
+// sendEmail(email, verificationToken);
   
   
 //////////////////////////////////////////////////////////////////
@@ -54,7 +54,8 @@ sendEmail(email, verificationToken);
   return res
     .status(StatusCodes.CREATED)
     .json({
-      msg: "please check your registered email for verification",
+      // msg: "please check your registered email for verification",
+      msg:`http://localhost:5000/api/v1/auth/verify-email?verificationToken=${verificationToken}&email=${email}`,
       errorCode:201
       /*, token: verificationToken */
 });
