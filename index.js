@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 // app.use(express.static("./public"));
 app.use(cors()); 
+app.use("/api/v1/auth", authRouter);
 
 app.get("/", (req, res) => {
   res.send("mern auth!");
@@ -35,7 +36,6 @@ app.get("/api/v1", (req, res) => {
   res.send("cookie-jar");
 });
 
-app.use("/api/v1/auth", authRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
