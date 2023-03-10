@@ -55,7 +55,7 @@ const register = async (req, res) => {
     .status(StatusCodes.CREATED)
     .json({
       // msg: "please check your registered email for verification",
-      msg:`http://localhost:5000/api/v1/auth/verify-email?verificationToken=${verificationToken}&email=${email}`,
+      msg:`https://e69-mern-auth.vercel.app/api/v1/auth/verify-email?verificationToken=${verificationToken}&email=${email}`,
       errorCode:201
       /*, token: verificationToken */
 });
