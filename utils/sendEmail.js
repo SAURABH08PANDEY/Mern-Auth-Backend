@@ -24,25 +24,6 @@ let info = await transporter.sendMail({
 });
 
 
-
-
-// apiInstance
-//   .sendTransacEmail({
-//     sender,
-//     to: recivers,
-//     subject: 'Verify Your Account',
-//     htmlContent:  `<a href="http://localhost:5000/api/v1/auth/verify-email?verificationToken=${verificationToken}&email=${email}">Verify Email</a>`,
-//   })
-//     .then(
-//       function (data) {
-//         console.log("API called successfully. Returned data: " + data);
-//       }
-//   )
-//   .catch(function (error) {
-//     console.error("............................",error);
-//   }
-// );
- 
 }
 
 module.exports = sendEmail;

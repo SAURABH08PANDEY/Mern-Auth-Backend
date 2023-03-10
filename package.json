@@ -33,8 +33,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.9"
-  },
-  "engines": {
-    "node": "14.x"
   }
+  
+
 }
